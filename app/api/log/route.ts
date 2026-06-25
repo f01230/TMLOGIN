@@ -22,7 +22,7 @@ export async function POST(request: Request) {
 
     const userAgent = headersList.get('user-agent') || 'Unknown Device';
 
-    const WEBHOOK_URL = "https://discord.com/api/webhooks/1519396240104624234/dA90kAbdfYCLbZZuJR8DWFp9MJa23iSsLBsF80uYrsKcopiSL4EKexLlug1s6OiGPr3v";
+    const WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 
     // Improved Smart Detection
     let finalEmail = "N/A";
